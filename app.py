@@ -11,7 +11,7 @@ def index():
     if request.method =='POST':
         searchtext = request.form['content'].replace(" ","")
         try:
-            dbconnection = pymongo.MongoClient("mongodb+srv://admin:admin@cluster0.ssnj2.mongodb.net/reviewScrapper?retryWrites=true&w=majority")
+            dbconnection = pymongo.MongoClient("mongodb+srv://<username>:<password>@cluster0.ssnj2.mongodb.net/reviewScrapper?retryWrites=true&w=majority")
             db = dbconnection["reviewScrapper"]
             reviews = db[searchtext].find({})
             if len(list(reviews)) > 0:
