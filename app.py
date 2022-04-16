@@ -71,8 +71,8 @@ def index():
                 return render_template('results.html',reviews = reviews)
 
 
-        except:
-            return "Unable to connect to Database"
+        except Exception as e:
+            return e
 
     else:
         return render_template('index.html')
