@@ -3,22 +3,30 @@
 {% block head %}
 
 <title>Search Page</title>
-<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/main.css')}}">
 {% endblock %}
 
     
 {% block body %}
 
-<div class="content">
-    <h1 style="text-align: center"> Search </h1>
+<div class="text-center">
+    <h1 class="text-dark  fst-italic  heading"> Flipkart Scrapper </h1>
 
-    <div class="form">
+    <div class="form  ">
         <form action="/" method="POST">
-            <input type="text" name="content" id="content">
-            <input type="submit" value="Search">
+            <input type="text" 
+            placeholder="Type product name"
+            name="content" id="content" class="w-75 me-3 p-2">
+            <input type="submit" value="Search" class="btn btn-outline-dark btn-lg px-5  textlight">
         </form>
 
+
+
     </div>
+    
 </div>
+<footer >
+    <h3 class="footer-text">Made with ❤️ by Ashutosh  </h3>
+</footer>
 
 {% endblock %}

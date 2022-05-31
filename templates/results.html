@@ -2,41 +2,42 @@
 
 <html lang="en">
 
-    <head>
+<head>
 
-        <meta charset="UTF=8">
-        <title>Review Page</title>
+    <meta charset="UTF=8">
+    <title>Review Page</title>
 
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-            <link rel="stylesheet" href="{{url_for('static', filename= 'css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css')}}">
 
-    </head>
 
-    <body>
-        <div class="table-users">
-            <div class="header">Reviews</div>
+</head>
 
-            <table cellspacing=""0>
-                <tr>
-                    <th>Product</th>
-                    <th>Name</th>
-                    <th>Rating</th>
-                    <th>Comment Header</th>
-                    <th width="400">Comments</th>
-                </tr>
-                {% for review in reviews %}
-                <tr>
-                    <td>{{review['Product']}}</td>
-                    <td>{{review['Name']}}</td>
-                    <td>{{review['Rating']}}</td>
-                    <td>{{review['CommentHead']}}</td>
-                    <td>{{review['Comment']}}</td>
-                </tr>
-                {% endfor %}
-            </table>
+<body>
+    <div class="table-users mt-5 ">
+        <div class="header">Reviews</div>
 
-        </div>
+        <table cellspacing="1">
+            <tr>
+                <th>Product</th>
+                <th>Name</th>
+                <th>Rating</th>
+                <th>Comment Header</th>
+                <th width="400">Comments</th>
+            </tr>
+            {% for review in reviews %}
+            <tr>
+                <td>{{review['Product']}}</td>
+                <td>{{review['Name']}}</td>
+                <td>{{review['Rating']}}</td>
+                <td>{{review['CommentHead']}}</td>
+                <td>{{review['Comment']}}</td>
+            </tr>
+            {% endfor %}
+        </table>
 
-    </body>
+    </div>
+
+</body>
 
 </html>
