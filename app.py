@@ -72,7 +72,7 @@ def index():
 
 
         except Exception as e:
-            return e
+            return str(e)
 
     else:
         return render_template('index.html')
